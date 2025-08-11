@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VibeBeats Online Player</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app-bg"></div>
+  <header>
+    <div class="logo">
+      <svg width="38" height="38" viewBox="0 0 40 40" fill="none">
+        <circle cx="20" cy="20" r="20" fill="#fff" stroke="#ff4da6" stroke-width="3"/>
+        <polygon points="15,11 32,20 15,29" fill="#ff4da6"/>
+      </svg>
+      <span class="logo-text">VibeBeats</span>
+    </div>
+    <nav>
+      <button class="nav-btn" data-tab="home">Home</button>
+      <button class="nav-btn" data-tab="about">About Me</button>
+      <button class="nav-btn" data-tab="feedback">Feedback</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="tab-home" class="tab active">
+      <h1>Explore Music Online</h1>
+      <div class="source-row">
+        <label><input type="radio" name="source" value="jamendo" checked> Jamendo</label>
+        <label><input type="radio" name="source" value="youtube"> YouTube</label>
+      </div>
+      <div class="search-row">
+        <input type="text" id="searchInput" placeholder="Search for music..." />
+        <button id="searchBtn">Search</button>
+      </div>
+      <ul id="songList"></ul>
+      <div class="player-box" id="playerBox" style="display:none;"></div>
+    </section>
+    <section id="tab-about" class="tab">
+      <h2>About Me</h2>
+      <div class="about-card">
+        <p>
+          Hi, I’m Mahes Dutta!<br>
+          VibeBeats is my passion project for exploring free music. Enjoy discovering tracks from Jamendo and music videos from YouTube!
+        </p>
+      </div>
+    </section>
+    <section id="tab-feedback" class="tab">
+      <h2>Feedback</h2>
+      <form id="feedbackForm">
+        <textarea name="feedback" placeholder="Your feedback..." required></textarea>
+        <button type="submit">Send Feedback</button>
+        <div id="feedbackMsg"></div>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <span>&copy; 2025 VibeBeats by Mahes Dutta</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
